@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --rose: #d49090;
+    --rose_blanc: #5a6372;
+    --light-color: #757575;
+    --box-shadow: 0 .5rem 1.5rem rgba(15, 15, 15, 0.1);
+    --border: 2rem solid rgba(19, 19, 19, 0.1);
+    --outline: 1rem solid rgba(28, 28, 28, 0.1);
+    --outline-hover: 1.5rem solid var(--rose_blanc);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background-color: #eee;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--rose_blanc);
+}
+
+.heading span {
+    background-color: var(--rose);
+    color: #fff;
+    display: inline-block;
+    padding: 5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    border: 2px solid var(--rose_blanc);
+    color: var(--rose_blanc);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--rose_blanc);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--rose);
+}
+
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--rose_blanc);
+}
+
+.header .login-form .box {
+    width: 100%;
+    margin: 15px 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    color: var(--rose_blanc);
+    text-transform: none;
+    height: 40px;
+}
+
+.header .login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    color: var(--rose);
+    text-decoration: underline;
+}
+
+/* Home */
+.home {
+    background: url(../_image/back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3 {
+    color: var(--rose_blanc);
+    font-size: 3rem;
+}
+
+.home .content h3 span {
+    color: var(--rose);
+}
+
+.home .content p {
+    color: var(--light-color);
+    font-size: 1.7rem;
+    padding: 1.7rem 0;
+    line-height: 1.8;
+}
+
+.features .box-container{
+    margin-top: -40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ajouté pour 3 colonnes */
+    width: 100%; /* Utilisation de 100% pour garantir une largeur fluide */
+    gap: 4rem;
+}
+
+.features .heading {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.features .heading span {
+    background-color: var(--rose);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+.features .box-container .box {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.features .box-container .box:hover {
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.features .box-container .box img {
+    max-width: 100%; /* Ajusté pour que l'image s'adapte à la largeur */
+    height: 20rem;
+    object-fit: cover; /* Pour garder un bon aspect ratio des images */
+}
+
+.features .box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--rose_blanc);
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 2rem;
+}
+
+#author {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#author .author-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#author .author-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+#author .author-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 2rem;
+}
+.categories .headding {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+.categories .headding span {
+    background-color: var(--rose);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+.categories .box-container .box{
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    height: 370px;
+    width: 300px;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset:-1rem ;
+    text-align: center;
+
+}
+.categories .box-container .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+.categories .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.categories .box-container .box h3{
+   font-size: 2rem;
+   color: var(--black);
+   line-height: 1.8;
+}
+.categories .box-container .box p{
+    font-size: 15px;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+ }
+
+
+.footer {
+    background-color: #e6cece;
+    padding: 1rem 0;  /* Augmenter l'espace au-dessus et en dessous pour plus d'espace */
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Colonnes flexibles avec une largeur minimale de 20rem */
+    gap: 2rem;  /* Espacement entre les éléments */
+    padding: 0 2rem;
+    max-width: 1200px;  /* Largeur maximale pour le container */
+    margin: 0 auto;  /* Centrer le footer */
+}
+
+.footer .box {
+    background-color: transparent; /* Retirer la couleur de fond */
+    border: none; /* Retirer toute bordure */
+    padding: 2rem; /* Espacement interne pour aérer */
+    box-shadow: none; /* Retirer l'ombre pour une apparence plus légère */
+    text-align: left; /* Aligner le texte à gauche pour plus de lisibilité */
+}
+
+.footer .box h3 {
+    font-size: 2.5rem;
+    color: #333;  /* Couleur de titre sombre pour un bon contraste */
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e76f51;  /* Ligne sous le titre avec couleur d'accent */
+    margin-bottom: 1.5rem;
+}
+
+.footer .box h3 i {
+    color: #fca311;  /* Couleur des icônes */
+}
+
+.footer .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #666;  /* Couleur du texte de paragraphe pour plus de lisibilité */
+    margin: 1rem 0;
+}
+
+.footer .box .share a {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: #fff;
+    background: #333;
+    margin-right: 1rem;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.footer .box .share a:hover {
+    background: #fca311;
+    color: #111;
+}
+
+.footer .box .links {
+    margin-top: -5px;
+    display: block;
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.8rem 0;
+    text-decoration: none;
+}
+
+.footer .box .links i {
+    color: #fca311;
+    padding-right: .5rem;
+}
+
+.footer .box .links:hover {
+    color: #333;
+}
+
+.footer .box .links:hover i {
+    padding-right: 1rem;
+}
+
+
+
+
+
+
+
+/* Styles de base pour le menu */
+.header .navbar {
+    display: flex; /* Affichage en ligne par défaut */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+/* Style général pour garder l'apparence intacte */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/* Logo */
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--rose_blanc);
+}
+
+.header .logo i {
+    color: var(--rose);
+}
+
+/* Menu de navigation */
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.9rem;
+    margin: 0 1rem;
+    color: var(--rose_blanc);
+}
+
+.header .navbar a:hover {
+    color: var(--rose);
+}
+
+/* Icônes de la barre supérieure */
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--rose_blanc);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background-color: var(--rose);
+    color: #fff;
+}
+
+/* Le bouton menu */
+#menu-btn {
+    display: none; /* Par défaut, on ne montre pas le bouton hamburger */
+}
+
+/* Responsivité du menu */
+@media (max-width: 768px) {
+    /* Cacher les liens du menu par défaut */
+    .header .navbar {
+        display: none; /* Cache les éléments du menu sur mobile */
+    }
+
+    /* Afficher le bouton hamburger */
+    #menu-btn {
+        display: block; /* Afficher le bouton hamburger */
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--rose);
+    }
+
+    /* Lorsque le menu est actif, l'afficher */
+    .navbar.active {
+        display: flex; /* Affiche le menu */
+        flex-direction: column; /* Disposer les éléments du menu en colonne */
+        align-items: center; /* Centrer les éléments */
+        position: absolute;
+        top: 100px; /* Sous l'entête */
+       right: 0;
+        left: 400px;
+        background-color: #fff; /* Fond blanc pour le menu */
+        box-shadow: var(--box-shadow);
+        padding: 1rem 0;
+        width: 200px;
+    }
+
+    /* Style des liens de menu lorsqu'il est actif */
+    .navbar a {
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        color: #333;
+        text-align: center;
+        width: 100%; /* Prendre toute la largeur pour un meilleur affichage */
+    }
+
+    /* Ajouter un hover sur les liens du menu */
+    .navbar a:hover {
+        background-color: #f0f0f0;
+    }
+}
+/* Media Query pour les écrans de taille moyenne */
+@media (max-width: 1020px) {
+    .product-slider .box {
+        width: calc(33.33% - 2rem); /* 3 produits par ligne */
+    }
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    .product-slider .box {
+        width: calc(50% - 2rem); /* 2 produits par ligne */
+    }
+
+    .products .heading {
+        font-size: 3rem; /* Réduire la taille du texte du titre sur les petits écrans */
+    }
+}
+
+/* Media Query pour les très petits écrans (smartphones) */
+@media (max-width: 450px) {
+    .product-slider .box {
+        width: 100%; /* Un produit par ligne */
+    }
+
+    .products .heading {
+        font-size: 2.5rem; /* Réduire encore la taille du titre */
+    }
+}
+
+/* Media query pour les écrans plus petits (tablettes et plus) */
+@media (max-width: 1020px) {
+    .features .box-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les écrans moyens */
+        width: 380px;
+        margin-left: 50px;
+    }
+
+    .features .heading {
+        font-size: 3rem; /* Réduire la taille du titre */
+    }
+
+    .features .box-container .box h3 {
+        font-size: 2rem; /* Réduire la taille du titre dans les boîtes */
+    }
+}
+
+/* Media query pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+    .features .box-container {
+        grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
+        gap: 2rem; /* Réduire l'espace entre les éléments */
+    }
+
+    .features .heading {
+        font-size: 2.5rem; /* Réduire la taille du titre sur les petits écrans */
+    }
+
+    .features .box-container .box h3 {
+        font-size: 1.8rem; /* Ajuster la taille des titres */
+    }
+
+    .features .box-container .box img {
+        height: 180px; /* Réduire la taille des images sur les petits écrans */
+    }
+}
+
+/* Media query pour les très petits écrans (smartphones en portrait) */
+@media (max-width: 450px) {
+    .features .heading {
+        font-size: 2rem; /* Réduire encore plus la taille du titre */
+    }
+
+    .features .box-container .box {
+        padding: 2rem 1rem; /* Réduire le padding des boîtes pour les petits écrans */
+    }
+
+    .features .box-container .box h3 {
+        font-size: 1.6rem; /* Ajuster encore plus la taille des titres */
+    }
+
+    .features .box-container .box img {
+        height: 12rem; /* Ajuster la taille des images pour les très petits écrans */
+    }
+}
+
+/* Media query pour les écrans plus petits (tablettes et plus) */
+@media (max-width: 1024px) {
+    .categories .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Passer à 2 colonnes sur les écrans moyens */
+        margin-left: 80px;
+        width: 380px;
+    }
+
+    .categories .headding {
+        font-size: 3rem; /* Réduire la taille du titre */
+    }
+
+    .categories .box-container .box {
+        padding: 2rem 1.5rem; /* Réduire le padding pour mieux utiliser l'espace */
+        height: 300px;
+    }
+
+    .categories .box-container .box h3 {
+        font-size: 1.8rem; /* Réduire la taille du titre dans les boîtes */
+    }
+
+    .categories .box-container .box img {
+        height: 100px; /* Réduire la taille de l'image */
+    }
+}
+
+/* Media query pour les écrans petits (smartphones et plus) */
+@media (max-width: 768px) {
+    .categories .box-container {
+        grid-template-columns: 1fr; /* Passer à 1 seule colonne sur les petits écrans */
+        gap: 2rem; /* Réduire l'espace entre les boîtes */
+    }
+
+    .categories .headding {
+        font-size: 2.5rem; /* Réduire la taille du titre */
+    }
+
+    .categories .box-container .box h3 {
+        font-size: 1.6rem; /* Réduire la taille du titre dans les boîtes */
+    }
+
+    .categories .box-container .box img {
+        height: 100px; /* Ajuster la taille des images */
+    }
+}
+
